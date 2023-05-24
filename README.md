@@ -1,4 +1,4 @@
-# pfm-peru
+# pfm_peru
 
 ## Description
 This project as the name describes, is a personal finance manager for peruvians, it started as a idea
@@ -47,7 +47,7 @@ Software versions tested or developed with:
 :todo: add issue tracker, a chat room, an email address, etc.
 
 ## Roadmap
-#### 2023 end of the objectives 
+#### 2023 end of the  year objectives 
 - add automatic taxes deductions or payments 
 - add rest services to receive files from an app
 
