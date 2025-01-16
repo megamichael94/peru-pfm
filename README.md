@@ -43,7 +43,7 @@ DATABASE_URL
 Local standard used is T-123-ticket-or-task-description
 - T for Trello as I handle new ideas or remaining work in Trello
 - 123 is a test number that basically is autocreated in Trello task url (part of the description)
-- Reference `#ToDo: add reference`
+- Reference https://github.com/michaelmestaspaz/pfm_peru/tree/1-get-tax-rates-from-sunat-page
 
 
 ## Test and Deploy
@@ -92,7 +92,7 @@ main contributors as code reviewer
 ## License
 MIT License
 
-Copyright (c) [2025] [Michael Andre Mestas Paz]
+Copyright (c) **2025 Michael Andre Mestas Paz**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
