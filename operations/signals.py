@@ -5,7 +5,7 @@ from django.dispatch import receiver
 
 from PIL import Image
 
-from operations.models import Payment, Income, Outcome
+from operations.models import Income, Outcome
 
 
 @receiver(post_save, sender=Income)
@@ -14,7 +14,7 @@ def image_compressor(sender, instance, **kwargs):
     """Signal to compress the image to 1/10 it's size
     Tested with: JPEG
     """
-    if kwargs["created"]:
+    if kwargs['created']:
         with Image.open(instance.image.path) as photo:
             photo.save(instance.image.path, optimize=True, quality=10)
 

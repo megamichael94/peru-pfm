@@ -1,16 +1,12 @@
 from django.contrib import admin
 
-from .models import Payment, Enterprise, Income, Outcome
+from .models import Payment, Enterprise, Income, Outcome, LineOfBusiness
 
-#
-# class DetailInLine(admin.TabularInline):
-#     model = Detail
-#
-#
+
 @admin.register(Income, Outcome)
-class IncomeAdmin(admin.ModelAdmin):
+class IncomeOutcomeAdmin(admin.ModelAdmin):
     """"""
 
-
 admin.site.register(Enterprise)
+admin.site.register(LineOfBusiness)
 
