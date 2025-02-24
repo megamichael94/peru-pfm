@@ -15,6 +15,9 @@ class LineOfBusiness(models.Model):
     name = models.CharField(max_length=512)
     code = models.IntegerField(unique=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Enterprise(models.Model):
     """
@@ -23,8 +26,9 @@ class Enterprise(models.Model):
 
     name = models.CharField(max_length=512)
     id_number = models.CharField(max_length=15, blank=True)
-    line_of_business = models.ForeignKey(
-        LineOfBusiness, blank=True, null=True, on_delete=models.CASCADE)
+    line_of_business = models.ManyToManyField(
+        LineOfBusiness, blank=True, related_name='enterprises'
+    )
 
     def __str__(self):
         return self.name
@@ -68,12 +72,7 @@ class Payment(models.Model):
             self.total_without_taxes = self.total - self.taxes
 
         instance = super().save(args, kwargs)
-        # print(getattr(instance, 'image'))
-        # if self.image:
-        #     image = Image.open(instance.image.path)
-        #     image.save(instance.image.path, quality=20, optimize=True)
         return instance
-
 
 
 class Income(Payment):

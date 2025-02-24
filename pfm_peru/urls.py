@@ -20,8 +20,9 @@ from django.urls import path
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', admin.site.urls),
 ]
+admin.site.site_header = 'PFM'
 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
