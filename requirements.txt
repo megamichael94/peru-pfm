@@ -6,6 +6,8 @@ sqlparse==0.4.3
 tzdata==2022.7
 django-extensions==3.2.1
 python-environ==0.4.54
+requests==2.32.3
+beautifulsoup4==4.12.3
 
 # render requirements
 brotli==1.1.0
